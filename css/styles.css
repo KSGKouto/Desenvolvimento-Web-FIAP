@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --color-light: #ffffff;
+    --color-dark:  #000000;
+    --color-red:   #FF0000;
+    --transition:  .5s;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 600;
+    transition: color var(--transition);
+    color: var(--color-light);
+}
+
+a:hover {
+    color: var(--color-red);
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .3)), 
+    url(../imagens/pexels-pixabay-301614.jpg);
+    color: var(--color-light);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+}
+
+.header-page {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.header-menu ul {
+    display: flex;
+    gap: 20px;
+}
+
+.hero {
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h2 {
+    font-size: 8vmin;
+}
+
+.hero h3 {
+    font-size: 6vmin;
+}
+
+.btn {
+    border: 2px solid var(--color-red);
+    padding: 8px 20px;
+    background-color: var(--color-red);
+    border-radius: 70px;
+    transition: background-color var(--transition);
+}
+
+.btn:hover {
+    background-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+/* Cards */
+
+.cards {
+    width: 90%;
+    min-height: 100vh;
+    margin: auto;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.cards h2{
+    font-size: 3vw;
+}
+
+.cards-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 60px;
+    margin: 25px 0;
+}
+
+.card-item {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    box-shadow: 1px 1px 30px #ccc;
+    padding: 20px 20px;
+    border-radius: 7px;
+    transition: scale var(--transition);
+}
+
+.card-item:hover {
+    cursor: pointer;
+    scale: 1.1;
+}
+
+.card-item img{
+    width: 80%;
+    border-radius: 7px;
+}
+
+.card-item p {
+    width: 75%;
+}
+
+/* Básico do responsivo */
+@media(width <= 900px){
+    .card-item {
+        width: 90%;
+    }
+}
